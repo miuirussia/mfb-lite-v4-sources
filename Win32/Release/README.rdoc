@@ -1,0 +1,23 @@
+== Welcome to MFB Lite
+
+MFB Lite is program to translate miui android firmwares, and integrate addons
+
+== Getting Started
+
+1. {Download}[link:/miuirussia/mfb-lite-program/zipball/master] newest distributive
+
+2. Unpack ZIP file to folder with path without spaces
+
+3. Start <b>MFB.exe</b>
+
+4. Follow instruction in program
+
+5. Follow the guidelines to start working with MFB Lite
+
+* The README file created within your application.
+
+== Build Status: 
+   No errors found
+
+== License
+* See {LICENSES} [link:/miuirussia/mfb-lite-program/blob/master/LICENSES.txt] file

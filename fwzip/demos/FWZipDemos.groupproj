@@ -1,0 +1,108 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{FA0550D4-8A2A-4379-A416-DF7C3700E023}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="Create ZIP 1\CreateZIPDemo1.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Create ZIP 2\CreateZIPDemo2.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Extract ZIP 1\ExctractZIPDemo1.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Extract ZIP 2\ExctractZIPDemo2.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="PerfomanceTest\FWZipPerfomance.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Test Build With Exception\BuildWithException.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Use ZIP ExData\UseExDataBlob.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="CreateZIPDemo1">
+			<MSBuild Projects="Create ZIP 1\CreateZIPDemo1.dproj"/>
+		</Target>
+		<Target Name="CreateZIPDemo1:Clean">
+			<MSBuild Targets="Clean" Projects="Create ZIP 1\CreateZIPDemo1.dproj"/>
+		</Target>
+		<Target Name="CreateZIPDemo1:Make">
+			<MSBuild Targets="Make" Projects="Create ZIP 1\CreateZIPDemo1.dproj"/>
+		</Target>
+		<Target Name="CreateZIPDemo2">
+			<MSBuild Projects="Create ZIP 2\CreateZIPDemo2.dproj"/>
+		</Target>
+		<Target Name="CreateZIPDemo2:Clean">
+			<MSBuild Targets="Clean" Projects="Create ZIP 2\CreateZIPDemo2.dproj"/>
+		</Target>
+		<Target Name="CreateZIPDemo2:Make">
+			<MSBuild Targets="Make" Projects="Create ZIP 2\CreateZIPDemo2.dproj"/>
+		</Target>
+		<Target Name="ExctractZIPDemo1">
+			<MSBuild Projects="Extract ZIP 1\ExctractZIPDemo1.dproj"/>
+		</Target>
+		<Target Name="ExctractZIPDemo1:Clean">
+			<MSBuild Targets="Clean" Projects="Extract ZIP 1\ExctractZIPDemo1.dproj"/>
+		</Target>
+		<Target Name="ExctractZIPDemo1:Make">
+			<MSBuild Targets="Make" Projects="Extract ZIP 1\ExctractZIPDemo1.dproj"/>
+		</Target>
+		<Target Name="ExctractZIPDemo2">
+			<MSBuild Projects="Extract ZIP 2\ExctractZIPDemo2.dproj"/>
+		</Target>
+		<Target Name="ExctractZIPDemo2:Clean">
+			<MSBuild Targets="Clean" Projects="Extract ZIP 2\ExctractZIPDemo2.dproj"/>
+		</Target>
+		<Target Name="ExctractZIPDemo2:Make">
+			<MSBuild Targets="Make" Projects="Extract ZIP 2\ExctractZIPDemo2.dproj"/>
+		</Target>
+		<Target Name="FWZipPerfomance">
+			<MSBuild Projects="PerfomanceTest\FWZipPerfomance.dproj"/>
+		</Target>
+		<Target Name="FWZipPerfomance:Clean">
+			<MSBuild Targets="Clean" Projects="PerfomanceTest\FWZipPerfomance.dproj"/>
+		</Target>
+		<Target Name="FWZipPerfomance:Make">
+			<MSBuild Targets="Make" Projects="PerfomanceTest\FWZipPerfomance.dproj"/>
+		</Target>
+		<Target Name="BuildWithException">
+			<MSBuild Projects="Test Build With Exception\BuildWithException.dproj"/>
+		</Target>
+		<Target Name="BuildWithException:Clean">
+			<MSBuild Targets="Clean" Projects="Test Build With Exception\BuildWithException.dproj"/>
+		</Target>
+		<Target Name="BuildWithException:Make">
+			<MSBuild Targets="Make" Projects="Test Build With Exception\BuildWithException.dproj"/>
+		</Target>
+		<Target Name="UseExDataBlob">
+			<MSBuild Projects="Use ZIP ExData\UseExDataBlob.dproj"/>
+		</Target>
+		<Target Name="UseExDataBlob:Clean">
+			<MSBuild Targets="Clean" Projects="Use ZIP ExData\UseExDataBlob.dproj"/>
+		</Target>
+		<Target Name="UseExDataBlob:Make">
+			<MSBuild Targets="Make" Projects="Use ZIP ExData\UseExDataBlob.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="CreateZIPDemo1;CreateZIPDemo2;ExctractZIPDemo1;ExctractZIPDemo2;FWZipPerfomance;BuildWithException;UseExDataBlob"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="CreateZIPDemo1:Clean;CreateZIPDemo2:Clean;ExctractZIPDemo1:Clean;ExctractZIPDemo2:Clean;FWZipPerfomance:Clean;BuildWithException:Clean;UseExDataBlob:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="CreateZIPDemo1:Make;CreateZIPDemo2:Make;ExctractZIPDemo1:Make;ExctractZIPDemo2:Make;FWZipPerfomance:Make;BuildWithException:Make;UseExDataBlob:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
